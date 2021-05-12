@@ -2,10 +2,11 @@ import { useEffect, useState } from 'react';
 import './App.css';
 import { getUsers } from './service.js'
 import { AllAccounts } from './accounts.jsx'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, HashRouter, Route, Switch } from 'react-router-dom'
 import Home from './home.jsx'
 import Navbar from './navbar.jsx'
 import User from './user'
+import { HashRouter } from 'react-router-dom'
 
 
 
@@ -16,12 +17,14 @@ function App() {
   useEffect(() => {
     getUsers().then(res => {
       setAccounts(res.data)
+    }).catch(err=>{
+      console.log(err)
     })
   }, [])
 
 
   return (
-    <Router basename="/">
+    <HashRouter basename="/">
       <div >
         <Navbar />
       </div>
@@ -41,7 +44,7 @@ function App() {
         Copyright  &copy; Milos Kozić 2021
         </footer>
       </div>
-    </Router>
+    </HashRouter>
   );
 }
 
