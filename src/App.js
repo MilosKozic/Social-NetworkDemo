@@ -6,7 +6,7 @@ import { BrowserRouter as Router, HashRouter, Route, Switch } from 'react-router
 import Home from './home.jsx'
 import Navbar from './navbar.jsx'
 import User from './user'
-import { HashRouter } from 'react-router-dom'
+
 
 
 
