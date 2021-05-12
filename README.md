@@ -19,6 +19,8 @@ Next, you need to clone GIT repo
 * Axios
 * Git
 * VSCode
+* CSS
+* HTML
 
 ---
 ## Description of project
