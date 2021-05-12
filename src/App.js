@@ -21,7 +21,7 @@ function App() {
 
 
   return (
-    <Router>
+    <Router basename="/">
       <div >
         <Navbar />
       </div>
