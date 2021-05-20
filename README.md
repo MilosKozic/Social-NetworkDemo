@@ -16,6 +16,7 @@ Next, you need to clone GIT repo
 
 * ReactJS 
     * react-router-dom
+    * hash-router
 * Axios
 * Git
 * VSCode
