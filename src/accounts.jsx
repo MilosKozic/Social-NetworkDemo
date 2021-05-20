@@ -12,7 +12,7 @@ export const AllAccounts = ({ accounts, setAccounts }) => {
             }} />
             <div className="users">
                 {accounts?.filter(el => el.firstName.toLowerCase().includes(search))
-                    .map(el => <div key={el.id}><Link to={`users/${el?.firstName}`}>{el?.firstName}<br/>{el?.surname}</Link></div>)}
+                    .map(el => <div key={el.id}><Link to={`users/${el?.id}`}>{el?.firstName}<br/>{el?.surname}</Link></div>)}
             </div>
         </main>
     )

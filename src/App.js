@@ -36,7 +36,7 @@ function App() {
           <Route exact path="/users">
             <AllAccounts accounts={accounts} />
           </Route>
-          <Route exact path="/users/:name">
+          <Route exact path="/users/:id">
             <User accounts={accounts} setAccounts={setAccounts} />
           </Route>
         </Switch>

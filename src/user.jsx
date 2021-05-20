@@ -3,8 +3,8 @@ import { useParams } from "react-router"
 import { Link } from 'react-router-dom'
 
 const User = ({ accounts }) => {
-    let { name } = useParams()
-    let singleUser = accounts?.filter(el => el.firstName == name)
+    let { id } = useParams()
+    let singleUser = accounts?.filter(el => el.id == id)
     let directFriends = accounts?.filter(el => singleUser[0]?.friends.includes(el.id))
 
     let x = directFriends.map(el => el.id)                             //direct friends id
@@ -64,19 +64,19 @@ const User = ({ accounts }) => {
              </div>        
                 {
                     friends ?
-                       directFriends?.map(el => <div className="friends" key={el.id}><Link to={`${el.firstName}`}>{el.firstName}</Link></div>)
+                       directFriends?.map(el => <div className="friends" key={el.id}><Link to={`${el.id}`}>{el.firstName}</Link></div>)
                         :
                         console.log('direct friends')
                 }
                 {
                     fOFf ?
-                        friendsFriends?.map(el => <div className="fof" key={el.id}><Link to={`${el.firstName}`}>{el.firstName}</Link></div>)
+                        friendsFriends?.map(el => <div className="fof" key={el.id}><Link to={`${el.id}`}>{el.firstName}</Link></div>)
                         :
                         console.log('friends friends')
                 }
                 {
                     suggested ?
-                    suggestedFriends?.map(el => <div className="suggested" key={el.id}><Link to={`${el.firstName}`}>{el.firstName}</Link></div>)
+                    suggestedFriends?.map(el => <div className="suggested" key={el.id}><Link to={`${el.id}`}>{el.firstName}</Link></div>)
                         :
                         console.log('suggested friends')
                 }
